@@ -83,7 +83,7 @@ parse_params() {
     fi
 
     REMOTE_DISPLAY=${REMOTE_DISPLAY:-true}
-    LOCAL_DISPLAY=${LOCAL_DISPLAY:-false}    
+    LOCAL_DISPLAY=${LOCAL_DISPLAY:-false}
 }
 
 launch_display() {
