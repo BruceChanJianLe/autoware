@@ -5,6 +5,19 @@
 ccbrs --cmake-args -DCUDA_NVCC_FLAGS="--allow-unsupported-compiler" 
 ```
 
+ERROR:  
+```bash
+ros2: Failed to find a free participant index for domain 0
+```
+
+FIX: https://answers.ros.org/question/408754/  
+```xml
+    <Discovery>
+      <ParticipantIndex>auto</ParticipantIndex>
+      <MaxAutoParticipantIndex>1000</MaxAutoParticipantIndex>
+    </Discovery>
+```
+
 ![Autoware_RViz](https://user-images.githubusercontent.com/63835446/158918717-58d6deaf-93fb-47f9-891d-e242b02cba7b.png) 
 
 <!--- Contributors -->
