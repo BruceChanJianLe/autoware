@@ -1,5 +1,6 @@
 # Autoware - the world's leading open-source software project for autonomous driving
 
+**WARNING** Run ansible without cuda for now.
 **WARNING** Build with:  
 ```bash
 ccbrs --cmake-args -DCUDA_NVCC_FLAGS="--allow-unsupported-compiler" 
