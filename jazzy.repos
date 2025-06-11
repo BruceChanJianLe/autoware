@@ -85,8 +85,8 @@ repositories:
     version: ea36766fdc2ac8e8c8e3ac988ae69acd6d09bb30
   universe/external/llh_converter:
     type: git
-    url: https://github.com/MapIV/llh_converter.git
-    version: 07ad112b4f6b83eccd3a5f777bbe40ff01c67382
+    url: https://github.com/BruceChanJianLe/llh_converter.git
+    version: jazzy
   universe/external/morai_msgs:
     type: git
     url: https://github.com/MORAI-Autonomous/MORAI-ROS2_morai_msgs.git
