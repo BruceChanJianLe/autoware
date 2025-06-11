@@ -41,8 +41,8 @@ repositories:
     version: 70000825155182d9261ce0980076b0e2c6dc3f51
   sensor_component/external/nebula:
     type: git
-    url: https://github.com/tier4/nebula.git
-    version: f43a28d1a8a51aca5efcae9186139767154bc44f
+    url: https://github.com/BruceChanJianLe/nebula.git
+    version: jazzy
   sensor_component/external/sensor_component_description:
     type: git
     url: https://github.com/tier4/sensor_component_description.git
@@ -77,8 +77,8 @@ repositories:
     version: 52219a5a730708e2c22b2a8164a68f999bd35127
   universe/external/eagleye:
     type: git
-    url: https://github.com/MapIV/eagleye.git
-    version: c1919448336e86a8dd9c94a337032c05fcf6c381
+    url: https://github.com/BruceChanJianLe/eagleye.git
+    version: jazzy
   universe/external/glog:
     type: git
     url: https://github.com/tier4/glog.git
@@ -105,8 +105,8 @@ repositories:
     version: ef094407bba4f475a8032972e0c60cbb939b51b8
   universe/external/tier4_ad_api_adaptor:
     type: git
-    url: https://github.com/tier4/tier4_ad_api_adaptor.git
-    version: 6013a40b292b88f19406eb2d4e5af11950adb9be
+    url: https://github.com/BruceChanJianLe/tier4_ad_api_adaptor.git
+    version: jazzy
   universe/external/tier4_autoware_msgs:
     type: git
     url: https://github.com/tier4/tier4_autoware_msgs.git
