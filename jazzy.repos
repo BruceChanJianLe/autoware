@@ -5,7 +5,7 @@ repositories:
     version: acd922a65fafb247e8c4f379e47647cc08632e4f
   universe/autoware.universe:
     type: git
-    url: https://github.com/BruceChanJianLe/autoware.universe.git
+    url: https://github.com/BruceChanJianLe/autoware_universe.git
     version: jazzy
   core/autoware_adapi_msgs:
     type: git
