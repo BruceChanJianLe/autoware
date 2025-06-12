@@ -1,5 +1,9 @@
 # Autoware - the world's leading open-source software project for autonomous driving
 
+Step1:
+```bash
+vcs import src < jazzy.repos
+```
 **WARNING** Run ansible without cuda for now.
 **WARNING** Build with:  
 ```bash
