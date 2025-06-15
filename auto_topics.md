@@ -12,3 +12,6 @@ Topic | Type | Description
 /vehicle/status/gear_status | autoware_vehicle_msgs/msg/GearReport | gear information
 /vehicle/status/actuation_status | tier4_vehicle_msgs/msg/ActuationStatusStamped | brake information
 /vehicle/status/turn_indicators_status | autoware_vehicle_msgs/msg/TurnIndicatorsReport | signal lights
+
+
+Refer: https://autowarefoundation.github.io/autoware-documentation/main/how-to-guides/integrating-autoware/creating-vehicle-interface-package/creating-vehicle-interface/
