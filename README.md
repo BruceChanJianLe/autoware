@@ -1,9 +1,21 @@
 # Autoware - the world's leading open-source software project for autonomous driving
 
-Step1:
+Step1: Install Build Tools
 ```bash
+sudo apt install pipx ccache -y
+```
+
+Step2: Clone Repositories
+```bash
+mkdir src
 vcs import src < jazzy.repos
 ```
+
+Step3: Install Dependencies for Repositories
+```bash
+rosdep install --from-paths src --ignore-src -r -y
+```
+
 **WARNING** Run ansible without cuda for now.
 **WARNING** Build with:  
 ```bash
