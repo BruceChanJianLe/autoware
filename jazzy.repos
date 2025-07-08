@@ -33,8 +33,8 @@ repositories:
     version: 451419ec58923b1a1035956f838afdb8d3cbc0d3
   launcher/autoware_launch:
     type: git
-    url: https://github.com/autowarefoundation/autoware_launch.git
-    version: ea1b6afaf66e615cc510b0d27d5a4fcf5d061199
+    url: https://github.com/BruceChanJianLe/autoware_launch.git
+    version: jazzy
   pacmod3_msgs:
     type: git
     url: https://github.com/astuff/pacmod3_msgs.git
@@ -73,8 +73,8 @@ repositories:
     version: 28d67e1d90bdbd89b1ff2bbd1abc63549e12a951
   sensor_kit/sample_sensor_kit_launch:
     type: git
-    url: https://github.com/autowarefoundation/sample_sensor_kit_launch.git
-    version: 8d50074da5f718966882166f4c66088f8cb63e55
+    url: https://github.com/BruceChanJianLe/sample_sensor_kit_launch.git
+    version: jazzy
   sensor_kit/single_lidar_sensor_kit_launch:
     type: git
     url: https://github.com/autowarefoundation/single_lidar_sensor_kit_launch.git
@@ -129,5 +129,5 @@ repositories:
     version: 1c033a21ce0c41cd4fb878b95d3e1620de79e95a
   vehicle/sample_vehicle_launch:
     type: git
-    url: https://github.com/autowarefoundation/sample_vehicle_launch.git
-    version: cd852aed85aaf033a0747050cf4300967e89c1ae
+    url: https://github.com/BruceChanJianLe/sample_vehicle_launch.git
+    version: jazzy
