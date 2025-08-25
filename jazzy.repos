@@ -131,3 +131,7 @@ repositories:
     type: git
     url: https://github.com/BruceChanJianLe/sample_vehicle_launch.git
     version: jazzy
+  tools/autoware_tools:
+    type: git
+    url: https://github.com/BruceChanJianLe/autoware_tools.git
+    version: jazzy
