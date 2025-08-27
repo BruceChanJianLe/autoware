@@ -2,7 +2,7 @@
 
 Step1: Install Build Tools
 ```bash
-sudo apt install pipx ccache -y
+sudo apt install pipx ccache libqt5charts5-dev -y
 ```
 
 Step2: Clone Repositories
