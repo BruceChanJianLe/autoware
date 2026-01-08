@@ -112,10 +112,11 @@ clone_repositories() {
     cd "$WORKSPACE_ROOT"
     if [ ! -d "src" ]; then
         mkdir -p src
-        vcs import src <autoware.repos
+        # vcs import src <autoware.repos
+        vcs import src < jazzy.repos
     else
         echo "Source directory already exists. Updating repositories..."
-        vcs import src <autoware.repos
+        vcs import src < jazzy.repos
         vcs pull src
     fi
 }

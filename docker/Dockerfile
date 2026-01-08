@@ -20,7 +20,8 @@ RUN rm -f /etc/apt/apt.conf.d/docker-clean \
 RUN --mount=type=ssh \
   --mount=type=cache,target=/var/cache/apt,sharing=locked \
   ./setup-dev-env.sh -y rosdep \
-  && pip uninstall -y ansible ansible-core \
+  # && pip uninstall -y ansible ansible-core \
+  && pipx uninstall ansible \
   && /autoware/cleanup_apt.sh
 
 # Generate install package lists
@@ -141,7 +142,8 @@ RUN --mount=type=ssh \
   --mount=type=cache,target=/var/cache/apt,sharing=locked \
   ./setup-dev-env.sh -y --module all --no-nvidia --no-cuda-drivers openadkit \
   && ./setup-dev-env.sh -y --module dev-tools openadkit \
-  && pip uninstall -y ansible ansible-core \
+  # && pip uninstall -y ansible ansible-core \
+  && pipx uninstall ansible \
   && /autoware/cleanup_apt.sh
 
 # Install rosdep dependencies
@@ -192,7 +194,8 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 # hadolint ignore=SC2002
 RUN --mount=type=ssh \
   ./setup-dev-env.sh -y --module all --no-cuda-drivers openadkit \
-  && pip uninstall -y ansible ansible-core \
+  # && pip uninstall -y ansible ansible-core \
+  && pipx uninstall ansible \
   && /autoware/cleanup_apt.sh true
 
 ENTRYPOINT ["/ros_entrypoint.sh"]
@@ -420,7 +423,8 @@ COPY --from=rosdep-depend /rosdep-core-exec-depend-packages.txt /tmp/rosdep-core
 RUN --mount=type=ssh \
   --mount=type=cache,target=/var/cache/apt,sharing=locked \
   ./setup-dev-env.sh -y --module all --no-nvidia --no-cuda-drivers --runtime openadkit \
-  && pip uninstall -y ansible ansible-core \
+  # && pip uninstall -y ansible ansible-core \
+  && pipx uninstall ansible \
   && apt-get update \
   && cat /tmp/rosdep-core-exec-depend-packages.txt | xargs apt-get install -y --no-install-recommends \
   && /autoware/cleanup_system.sh $LIB_DIR $ROS_DISTRO
@@ -446,7 +450,8 @@ COPY --from=rosdep-universe-sensing-perception-depend /rosdep-universe-sensing-p
 RUN --mount=type=ssh \
   --mount=type=cache,target=/var/cache/apt,sharing=locked \
   ./setup-dev-env.sh -y --module all --no-nvidia --no-cuda-drivers --runtime openadkit \
-  && pip uninstall -y ansible ansible-core \
+  # && pip uninstall -y ansible ansible-core \
+  && pipx uninstall ansible \
   && apt-get update \
   && cat /tmp/rosdep-universe-sensing-perception-exec-depend-packages.txt | xargs apt-get install -y --no-install-recommends \
   && /autoware/cleanup_system.sh $LIB_DIR $ROS_DISTRO
@@ -472,7 +477,8 @@ COPY --from=rosdep-universe-sensing-perception-depend /rosdep-universe-sensing-p
 RUN --mount=type=ssh \
   --mount=type=cache,target=/var/cache/apt,sharing=locked \
   ./setup-dev-env.sh -y --module all --no-nvidia --no-cuda-drivers --runtime openadkit \
-  && pip uninstall -y ansible ansible-core \
+  # && pip uninstall -y ansible ansible-core \
+  && pipx uninstall ansible \
   && apt-get update \
   && cat /tmp/rosdep-universe-sensing-perception-exec-depend-packages.txt | xargs apt-get install -y --no-install-recommends \
   && /autoware/cleanup_system.sh $LIB_DIR $ROS_DISTRO
@@ -494,7 +500,8 @@ COPY --from=rosdep-universe-localization-mapping-depend /rosdep-universe-localiz
 RUN --mount=type=ssh \
   --mount=type=cache,target=/var/cache/apt,sharing=locked \
   ./setup-dev-env.sh -y --module all --no-nvidia --no-cuda-drivers --runtime openadkit \
-  && pip uninstall -y ansible ansible-core \
+  # && pip uninstall -y ansible ansible-core \
+  && pipx uninstall ansible \
   && apt-get update \
   && cat /tmp/rosdep-universe-localization-mapping-exec-depend-packages.txt | xargs apt-get install -y --no-install-recommends \
   && /autoware/cleanup_system.sh $LIB_DIR $ROS_DISTRO
@@ -520,7 +527,8 @@ COPY --from=rosdep-universe-planning-control-depend /rosdep-universe-planning-co
 RUN --mount=type=ssh \
   --mount=type=cache,target=/var/cache/apt,sharing=locked \
   ./setup-dev-env.sh -y --module all --no-nvidia --no-cuda-drivers --runtime openadkit \
-  && pip uninstall -y ansible ansible-core \
+  # && pip uninstall -y ansible ansible-core \
+  && pipx uninstall ansible \
   && apt-get update \
   && cat /tmp/rosdep-universe-planning-control-exec-depend-packages.txt | xargs apt-get install -y --no-install-recommends \
   && /autoware/cleanup_system.sh $LIB_DIR $ROS_DISTRO
@@ -546,7 +554,8 @@ COPY --from=rosdep-universe-vehicle-system-depend /rosdep-universe-vehicle-syste
 RUN --mount=type=ssh \
   --mount=type=cache,target=/var/cache/apt,sharing=locked \
   ./setup-dev-env.sh -y --module all --no-nvidia --no-cuda-drivers --runtime openadkit \
-  && pip uninstall -y ansible ansible-core \
+  # && pip uninstall -y ansible ansible-core \
+  && pipx uninstall ansible \
   && apt-get update \
   && cat /tmp/rosdep-universe-vehicle-system-exec-depend-packages.txt | xargs apt-get install -y --no-install-recommends \
   && /autoware/cleanup_system.sh $LIB_DIR $ROS_DISTRO
@@ -572,7 +581,8 @@ COPY --from=rosdep-universe-visualization-depend /rosdep-universe-visualization-
 RUN --mount=type=ssh \
   --mount=type=cache,target=/var/cache/apt,sharing=locked \
   ./setup-dev-env.sh -y --module all --no-nvidia --no-cuda-drivers --runtime openadkit \
-  && pip uninstall -y ansible ansible-core \
+  # && pip uninstall -y ansible ansible-core \
+  && pipx uninstall ansible \
   && apt-get update \
   && cat /tmp/rosdep-universe-visualization-exec-depend-packages.txt | xargs apt-get install -y --no-install-recommends \
   && /autoware/cleanup_system.sh $LIB_DIR $ROS_DISTRO
@@ -598,7 +608,8 @@ COPY --from=rosdep-universe-depend /rosdep-exec-depend-packages.txt /tmp/rosdep-
 RUN --mount=type=ssh \
   --mount=type=cache,target=/var/cache/apt,sharing=locked \
   ./setup-dev-env.sh -y --module all --no-nvidia --no-cuda-drivers --runtime openadkit \
-  && pip uninstall -y ansible ansible-core \
+  # && pip uninstall -y ansible ansible-core \
+  && pipx uninstall ansible \
   && apt-get update \
   && cat /tmp/rosdep-exec-depend-packages.txt | xargs apt-get install -y --no-install-recommends \
   && /autoware/cleanup_system.sh $LIB_DIR $ROS_DISTRO
@@ -624,7 +635,8 @@ COPY --from=rosdep-universe-depend /rosdep-exec-depend-packages.txt /tmp/rosdep-
 RUN --mount=type=ssh \
   --mount=type=cache,target=/var/cache/apt,sharing=locked \
   ./setup-dev-env.sh -y --module all --no-nvidia --no-cuda-drivers --runtime openadkit \
-  && pip uninstall -y ansible ansible-core \
+  # && pip uninstall -y ansible ansible-core \
+  && pipx uninstall ansible \
   && apt-get update \
   && cat /tmp/rosdep-exec-depend-packages.txt | xargs apt-get install -y --no-install-recommends \
   && /autoware/cleanup_system.sh $LIB_DIR $ROS_DISTRO
