@@ -19,11 +19,9 @@
   changed_when: true
 
 - name: Install pre-commit
-  become: true
-  ansible.builtin.apt:
+  community.general.pipx:
     name: pre-commit
-    state: latest
-    executable: pipx
+    executable: /usr/bin/pipx
 
 - name: Install clang-format
   become: true
