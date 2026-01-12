@@ -45,8 +45,8 @@ else
 fi
 
 # Start docker container
-# image="autoware-docker"
-image="brucechanjianle/ubuntu24.04:v0.0.4-cnvros2-runtime"
+image="autoware-docker"
+# image="brucechanjianle/ubuntu24.04:v0.0.4-cnvros2-runtime"
 
 read -p "Container name: " CONTAINERNAME
 

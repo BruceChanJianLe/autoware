@@ -8,13 +8,13 @@ RUN apt-get update \
     && apt-get install git -y
 
 # Create autoware workspace and switch to directory
-WORKDIR /docker_mount
+WORKDIR /home/developer/docker_mount
 
 # Clone autoware repository
 RUN git clone -b release/2025.02 https://github.com/BruceChanJianLe/autoware.git
 
 # Switch to autoware directory
-WORKDIR /docker_mount/autoware
+WORKDIR /home/developer/docker_mount/autoware
 
 # RUN ./setup-dev-env.sh
 RUN set -a \
@@ -35,12 +35,9 @@ RUN rosdep init || true
 RUN rosdep update
 
 # Install ROS package dependencies
-RUN echo "source /opt/ros/jazzy/setup.bash" >> ~/.bashrc
 RUN rosdep install --from-paths src --ignore-src --rosdistro jazzy -r -y
-RUN apt install ros-jazzy-cudnn-cmake-module ros-jazzy-tensorrt-cmake-module ros-jazzy-geographic-msgs
 
 # Build autoware workspace
-WORKDIR /docker_mount/autoware
 RUN bash -c "source /opt/ros/jazzy/setup.bash && \
              colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release"
  
