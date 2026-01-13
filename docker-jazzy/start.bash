@@ -45,10 +45,9 @@ else
 fi
 
 # Start docker container
-image="autoware-docker"
-# image="brucechanjianle/ubuntu24.04:v0.0.4-cnvros2-runtime"
+image="autoware-jazzy:2025.02"
 
-read -p "Container name: " CONTAINERNAME
+read -p "Container name for autoware-jazzy: " CONTAINERNAME
 
 if [ -n "$WAYLAND_DISPLAY" ]; then
   docker run -it \
